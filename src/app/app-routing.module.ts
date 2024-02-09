@@ -11,6 +11,7 @@ const routes: Routes = [
   {path : "PORTFOLIO" , component : PortfolioComponent},
   {path : "CONTACT" , component : ContactComponent},
   {path : "startFrameWork" , component : StartFrameworkComponent},
+  {path : "**" ,  redirectTo: "startFrameWork" , pathMatch:"full"}
 
 ];
 

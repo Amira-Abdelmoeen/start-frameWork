@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 
 interface images{
@@ -12,7 +13,11 @@ interface images{
 })
   
   
-export class PortfolioComponent {
+export class PortfolioComponent  implements OnInit{
+  constructor(private titleService:Title) { }
+  ngOnInit(): void {
+    this.titleService.setTitle("Portfolio")
+  }
       isActive:boolean=false
       imgSrc : string = ""
       image : images[] = [
