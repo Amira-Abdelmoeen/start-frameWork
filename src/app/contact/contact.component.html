@@ -1,0 +1,25 @@
+<div class="contact d-flex flex-column align-items-center justify-content-center pt-5">
+    <div class="header mt-5">
+        <h2 class="mt-5">CONATCT SECTION <span></span></h2>
+    </div>
+    <section class="col-md-6 mt-5 p-5">
+        <div class="mb-3 position-relative">
+          <label for="user-name" class="form-label" [ngClass]="{'slide-from-bottom' : user['name']}" id="">userName:</label>
+          <input type="text" (keyup)="showLabel($event)" class="form-control" id="name" placeholder="userName">
+        </div>
+        <div class="mb-3 position-relative mt-4">
+          <label for="userAge" class="form-label" [ngClass]="{'slide-from-bottom' : user['age']}">userAge:</label>
+          <input type="number" (keyup)="showLabel($event)" class="form-control " id="age" placeholder="userAge">
+        </div>
+        <div class="mb-3 ">
+          <label for="userEmail" class="form-label" [ngClass]="{'slide-from-bottom' : user['email']}">userEmail:</label>
+          <input type="email" name="email" (keyup)="showLabel($event)" class="form-control " id="email" placeholder="userEmail" >
+        </div>
+        <div class="mb-3">
+          <label for="userPassword" class="form-label" [ngClass]="{'slide-from-bottom' : user['password']}">userPassword:</label>
+          <input type="userPassword" (keyup)="showLabel($event)" class="form-control" id="password" placeholder="userPassword">
+        </div>
+     
+        <button type="submit" class="botton rounded-2 mt-2">send Message</button>
+    </section>
+</div>

@@ -1,0 +1,54 @@
+input {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    padding-bottom: 15px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+input:focus {
+    box-shadow: none;
+}
+
+label {
+    color: #1ABC9C;
+    visibility: hidden;
+}
+
+.botton {
+    padding: 7px 15px;
+    border: none;
+    background-color: #1ABC9C;
+    color: white;
+}
+
+.label {
+    top: -33px;
+    opacity: 1;
+    position: absolute;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(160%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-from-bottom {
+    visibility: visible;
+    animation: slideInFromBottom 0.7s ease-in-out forwards;
+}
+
+.header h2::before {
+    left: 87px;
+    /* top: 70px; */
+}
+
+.header h2::after {
+    right: 57px;
+}

@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+.header h2,.header2 h2{
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    color: #2C3E50;
+    width: fit-content;
+}
+.header h2::before ,.header2 h2::before{
+    content: "";
+    width: 77px;
+    height: 4px;
+    display: inline-block;
+    background-color: #2C3E50;
+    position: absolute;
+    bottom: -30px;
+    left: 25%;
+}
+.header h2::after,.header2 h2::after{
+    content: "";
+    width: 77px;
+    height: 4px;
+    background-color: #2C3E50;
+    position: absolute;
+    display: inline-block;
+    right: 18%;
+    bottom: -60%;
+}
+.header span::after,.header2 span::after{
+    font-family: FontAwesome;
+    content: "\272F";
+    font-size: 38px;
+    position: absolute;
+    left: 50%;
+    color: #2C3E50;
+    top:50px;
+}
+.header2 h2::after{
+   background-color: white;
+}
+.header2 h2::before{
+    background-color: white;
+}
+.header2 span::after{
+    color: white;
+}
+.header2 h2{
+    color: white;
+}

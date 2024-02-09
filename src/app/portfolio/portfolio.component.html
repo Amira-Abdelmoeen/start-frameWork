@@ -1,0 +1,20 @@
+<div class="portfolio  ">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-5">
+        <div class="header mt-5">
+            <h2 class="mt-5">PORTFOLIO COMPONENT<span></span></h2>
+        </div>
+        <div class="row content p-5 g-5 m-0" >
+            <div *ngFor="let item of image;let i = index" class="col-md-6 col-lg-4">
+                <div class="item position-relative ">
+                    <img src="{{item.imgSrc}}" class="w-100 rounded-3" alt="not-loaded">
+                    <div class="info position-absolute rounded-3 " (click)="showImage(i)">
+                        <i class="fa-solid fa-plus" id="icon-img"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="photo" *ngIf="isActive" (click)="hideImage()">
+            <img [src]="imgSrc" class="" alt="not-loaded">
+        </div>
+    </div>
+</div>
